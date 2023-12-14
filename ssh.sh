@@ -6,6 +6,12 @@ public_key_url="https://r2.imgs.ng/id_rsa.pub"
 # 下载公钥文件
 wget -O /root/.ssh/id_rsa.pub "$public_key_url"
 
+# 检查 .ssh 文件夹是否存在，如果不存在则创建
+if [ ! -d "/root/.ssh" ]; then
+    mkdir /root/.ssh
+fi
+
+
 # 检查下载是否成功
 if [ $? -ne 0 ]; then
     echo "下载公钥文件失败，请检查公钥下载链接或网络连接。"
