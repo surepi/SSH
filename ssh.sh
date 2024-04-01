@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # 设置公钥下载链接
-public_key_url="https://r2.imgs.ng/id_rsa.pub"
+public_key_url="https://r2.814560.xyz/id_rsa.pub"
 
 # 下载公钥文件
 wget -O /root/.ssh/id_rsa.pub "$public_key_url"
